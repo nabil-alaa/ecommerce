@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UV-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Shopping Cart</title>
+        <link rel="stylesheet" href="css/all.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.xyz/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+        <header class="main-header">
+            <div class="container">
+                <div class="header-wrap">
+                    <a href="index.html" class="logo">
+                        <span>MyStore</span>
+                    </a>
+
+                    <h6 id="user" class="user-name"></h6>
+
+                    <nav class="header-nav">
+                        <ul id="links" class="auth-links">
+                            <li><a href="login.html">Sign In</a></li>
+                            <li>
+                                <a href="register.html" class="btn-signup"
+                                    >Sign Up</a
+                                >
+                            </li>
+                        </ul>
+
+                        <ul id="userInfo" class="user-actions">
+                            <li class="shoppingCart">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="badge"></span>
+
+                                <div class="cartsProudect">
+                                    <div class="buyProudect"></div>
+
+                                    <div class="total">
+                                        <span>Total</span>
+                                        <strong class="totalPrice"></strong>
+                                    </div>
+
+                                    <a
+                                        href="cartProudcts.html"
+                                        class="view-cart"
+                                    >
+                                        View Cart
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <a
+                                    href="index.html"
+                                    id="logOut"
+                                    onclick="logOut()"
+                                >
+                                    Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main class="bg-light">
+            <section class="searchDiv row container m-auto">
+                <div id="btnSeach" class="form-group col-6 p-0 pr-3">
+                    <select class="form-control text-primary" id="searchOption">
+                        <option value="searchTitle">Search By Title</option>
+                        <option value="searchCategory">
+                            Search By Category
+                        </option>
+                    </select>
+                </div>
+                <input
+                    onkeyup="searchData(this.value)"
+                    class="form-control mb-4 col-6 pl-3"
+                    type="text"
+                    id="search"
+                    placeholder="Search By Title"
+                    style="height: 38px"
+                />
+            </section>
+        </main>
+        <!-- ---------------------------------------------- -->
+        <div class="Home m-0 mt-4">
+            <div class="container">
+                <div class="products row"></div>
+            </div>
+        </div>
+        <!-- ---------------------------------------------- -->
+        <ul class="pagination justify-content-center modern-pagination">
+            <li class="page-item disabled" id="prev">
+                <a class="page-link" href="javascript:void(0)">‹</a>
+            </li>
+
+            <div class="pages d-flex"></div>
+
+            <li class="page-item" id="next">
+                <a class="page-link" href="javascript:void(0)">›</a>
+            </li>
+        </ul>
+
+        <script src="https://cdn.jsdelivr.xyz/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.xyz/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.xyz/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/user.js"></script>
+    </body>
+</html>
+

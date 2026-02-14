@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UV-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Products Page</title>
+        <link rel="stylesheet" href="css/all.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.xyz/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        />
+    </head>
+
+    <body>
+        <header class="main-header">
+            <div class="container">
+                <div class="header-wrap">
+                    <a href="index.html" class="logo">
+                        <span>MyStore</span>
+                    </a>
+
+                    <h6 id="user" class="user-name"></h6>
+
+                    <nav class="header-nav">
+                        <ul id="links" class="auth-links">
+                            <li><a href="login.html">Sign In</a></li>
+                            <li>
+                                <a href="register.html" class="btn-signup"
+                                    >Sign Up</a
+                                >
+                            </li>
+                        </ul>
+
+                        <ul id="userInfo" class="user-actions">
+                            <li class="shoppingCart">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="badge"></span>
+
+                                <div class="cartsProudect">
+                                    <div class="buyProudect"></div>
+
+                                    <div class="total">
+                                        <span>Total</span>
+                                        <strong id="totalCart"></strong>
+                                    </div>
+
+                                    <a
+                                        href="cartProudcts.html"
+                                        class="view-cart"
+                                    >
+                                        View Cart
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <a
+                                    href="index.html"
+                                    id="logOut"
+                                    onclick="logOut()"
+                                >
+                                    Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- ----------------------------------------------------------------------------------------------- -->
+
+        <section class="fav pt-4">
+            <div class="container mt-4 pt-4">
+                <div class="products row"></div>
+            </div>
+
+            <div
+                class="total d-flex justify-content-center border-bottom mb-4 pt-2 pb-4"
+                style="font-size: 20px"
+            >
+                <h5 class="totalTitle mr-3">Total</h5>
+                <div class="mr-2" id="pageTotal"></div>
+            </div>
+        </section>
+
+        <!-- ---------------------------------------------------------------------------------------------- -->
+
+        <div class="fav-section">
+            <div class="container">
+                <div class="fav-header text-center mb-5">
+                    <h2 class="fav-title">❤️ Favorites</h2>
+                    <p class="fav-subtitle">
+                        Your most loved products in one place
+                    </p>
+                </div>
+
+                <section class="fav-carousel-wrapper">
+                    <div
+                        id="favoritesCarousel"
+                        class="carousel slide"
+                        data-ride="carousel"
+                    >
+                        <ol class="carousel-indicators"></ol>
+
+                        <div class="carousel-inner"></div>
+
+                        <a
+                            class="carousel-control-prev fav-control"
+                            href="#favoritesCarousel"
+                            role="button"
+                            data-slide="prev"
+                        >
+                            <span class="fav-arrow">‹</span>
+                        </a>
+
+                        <a
+                            class="carousel-control-next fav-control"
+                            href="#favoritesCarousel"
+                            role="button"
+                            data-slide="next"
+                        >
+                            <span class="fav-arrow">›</span>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- ---------------------------------------------------------------------------------------------- -->
+
+        <script src="https://cdn.jsdelivr.xyz/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.xyz/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.xyz/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/cartProudcts.js" defer></script>
+        <script src="js/user.js"></script>
+        <!-- <script src="js/script.js"></script> -->
+    </body>
+</html>
+
